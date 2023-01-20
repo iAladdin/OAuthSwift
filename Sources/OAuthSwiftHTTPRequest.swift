@@ -321,7 +321,7 @@ extension OAuthSwiftHTTPRequest {
         }
 
         // MARK: init
-        public init(url: URL, httpMethod: Method = .GET, httpBody: Data? = nil, headers: OAuthSwift.Headers = [:], timeoutInterval: TimeInterval = 60, httpShouldHandleCookies: Bool = false, parameters: OAuthSwift.Parameters, paramsLocation: ParamsLocation = .authorizationHeader, dataEncoding: String.Encoding = OAuthSwiftDataEncoding, sessionFactory: URLSessionFactory = .default) {
+        public init(url: URL, httpMethod: Method = .GET, httpBody: Data? = nil, headers: OAuthSwift.Headers = [:], timeoutInterval: TimeInterval = 60, httpShouldHandleCookies: Bool = true, parameters: OAuthSwift.Parameters, paramsLocation: ParamsLocation = .authorizationHeader, dataEncoding: String.Encoding = OAuthSwiftDataEncoding, sessionFactory: URLSessionFactory = .default) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = httpMethod.rawValue
             urlRequest.httpBody = httpBody
